@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{AF196866-8452-4FCB-B4C2-695A3FFE0519}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{404D616F-C431-4255-9849-C3C9A200326E}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>TestPatternsImpl</RootNamespace>
-    <AssemblyName>TestPatternsImpl</AssemblyName>
+    <RootNamespace>CommandPattern</RootNamespace>
+    <AssemblyName>CommandPattern</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,16 +22,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject>TestPatternsImpl.DependencyInjectionPatternProgram</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -45,32 +39,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CommandPatternProgram.cs" />
-    <Compile Include="DependencyInjectionPatternProgram.cs" />
-    <Compile Include="FacadePatternProgram.cs" />
-    <Compile Include="SingletonPatternProgram.cs" />
+    <Compile Include="BuyStockCommand.cs" />
+    <Compile Include="IOrderCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\CommandPattern\CommandPattern.csproj">
-      <Project>{404d616f-c431-4255-9849-c3c9a200326e}</Project>
-      <Name>CommandPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DependencyInjectionPattern\DependencyInjectionPattern.csproj">
-      <Project>{06444528-74a4-4e07-a18b-f19567662533}</Project>
-      <Name>DependencyInjectionPattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\FacadePattern\FacadePattern.csproj">
-      <Project>{d61a7425-f266-4759-951a-1532db8181b7}</Project>
-      <Name>FacadePattern</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SingletonPattern\SingletonPattern.csproj">
-      <Project>{5ea3d829-4eb0-419d-b5ba-837131187eb0}</Project>
-      <Name>SingletonPattern</Name>
-    </ProjectReference>
+    <Compile Include="SellStockCommand.cs" />
+    <Compile Include="StockInvoker.cs" />
+    <Compile Include="StockReciever.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

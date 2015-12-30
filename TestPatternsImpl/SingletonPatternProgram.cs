@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TestPatternsImpl
 {
-    class Program
+    class SingletonPatternProgram
     {
         static void Main(string[] args)
         {
