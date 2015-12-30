@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SingletonPattern;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +11,11 @@ namespace TestPatternsImpl
     {
         static void Main(string[] args)
         {
-            SingletonPattern.Singleton singleton =  SingletonPattern.Singleton.Instance;//new SingletonPattern.Singleton();
+            SingletonPattern.Singleton singleton =  Singleton.Instance;//new SingletonPattern.Singleton();
             int hashCode=singleton.HashCode();
             Console.WriteLine(hashCode);
 
-            SingletonPattern.Singleton singleton2 = SingletonPattern.Singleton.Instance;//new SingletonPattern.Singleton();
+            SingletonPattern.Singleton singleton2 = Singleton.Instance;//new SingletonPattern.Singleton();
             hashCode = singleton2.HashCode();
             Console.WriteLine(hashCode);
 

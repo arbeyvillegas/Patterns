@@ -6,19 +6,19 @@ using System.Threading.Tasks;
 
 namespace FacadePattern
 {
-    public class ClassA
+    internal class ClassA
     {
-        public string FunctionA_1()
+        internal string FunctionA_1()
         {
             return "FunctionA_1";
         }
 
-        public string FunctionA_2()
+        internal string FunctionA_2()
         {
             return "FunctionA_2";
         }
 
-        public string FunctionA_3()
+        internal string FunctionA_3()
         {
             return "FunctionA_3";
         }
